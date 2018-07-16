@@ -1,0 +1,21 @@
+{
+  "name": "renzu",
+  "version": "1.0.0",
+  "description": "Website for Renzu.tv",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Renzu"
+  ],
+  "author": "Kyle Rosen",
+  "license": "ISC",
+  "dependencies": {
+    "install": "^0.12.1",
+    "materialize-css": "^1.0.0-rc.2",
+    "normalize.css": "^8.0.0",
+    "npm": "^6.2.0",
+    "vue": "^2.5.16"
+  }
+}

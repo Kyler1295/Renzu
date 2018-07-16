@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <!--Import Google Icon Font-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
+    <!-- Materialize CSS StyleSheet -->
+    <link rel="stylesheet" href="./node_modules/materialize-css/dist/css/materialize.min.css">
+    <!-- Base CSS Stylesheet -->
+    <link rel="stylesheet" href="./styles/css/styles.css">
+    <title>Renzu</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar-fixed" style="position: fixed;">
+            <nav>
+                <div class="nav-wrapper container">
+                    <a href="#!" class="brand-logo left">
+                        <img class="logo" src="./assets/Logo150.png" alt="Renzu">
+                    </a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger right">
+                        <i class="material-icons">menu</i>
+                    </a>
+                    <ul class="right hide-on-med-and-down">
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Editors</a>
+                        </li>
+                        <li>
+                            <a href="#">Clients</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <ul class="sidenav" id="mobile-demo">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Editors</a>
+            </li>
+            <li>
+                <a href="#">Clients</a>
+            </li>
+            <li>
+                <a href="#">Contact</a>
+            </li>
+        </ul>
+    </header>
+    <main>
+
+        <section class="hero">
+            <img class="LogoText" src="./assets/LogoText.png" alt="Renzu">
+            <h3 class="tagLine">Your Success, Our Passion.</h3>
+            <i class="material-icons downwardArrow">arrow_downward</i>
+        </section>
+
+        <section class="callOutRightSlant">
+            <div class="callOutLeft">
+                <h4>Consistent Standards</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, excepturi nesciunt itaque quidem cupiditate
+                    similique suscipit odio! Aliquid maxime officia praesentium quidem, consectetur delectus dolorem. Velit
+                    impedit accusantium porro vel pariatur repellendus repellat reiciendis quasi! Maiores voluptatum eius
+                    accusantium ducimus.</p>
+                <a href="#" class="cta btn waves-effect waves-light">See Our Editors</a>
+            </div>
+            <div class="callOutRight">
+                <img src="./assets/placeholder.jpg" alt="#">
+            </div>
+        </section>
+
+        <section class="callOutLeftSlant">
+            <div class="callOutLeft">
+                <img src="./assets/placeholder.jpg" alt="#">
+            </div>
+            <div class="callOutRight">
+                <h4>A History Of Success</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, excepturi nesciunt itaque quidem cupiditate
+                    similique suscipit odio! Aliquid maxime officia praesentium quidem, consectetur delectus dolorem. Velit
+                    impedit accusantium porro vel pariatur repellendus repellat reiciendis quasi! Maiores voluptatum eius
+                    accusantium ducimus.</p>
+                <a href="#" class="cta btn waves-effect waves-light">Meet Our Clients</a>
+            </div>
+        </section>
+
+        <section id="editors">
+            <h3>The Team</h3>
+            <div v-if="fullList" class="editorList">
+                <div class="editor" v-for="editor in editors">
+                    <img @click="editorView(editor)" :src="editor.picture" alt="editor.name">
+                    <h6>{{editor.name}}</h6>
+                    <a :href="editor.twitterURL">Twitter: {{editor.twitter}}</a>
+                    <p>Position: {{editor.position}}</p>
+                </div>
+            </div>
+            <div class="inspectedEditor" v-else>
+                <img :src="inspectedEditor.picture" :alt="inspectedEditor.name">
+                <div class="editorInfo">
+                    <h3>{{inspectedEditor.name}}</h3>
+                    <div>
+                        <h6>{{inspectedEditor.position}}</h6>
+                        <a :href="inspectedEditor.twitterURL">{{inspectedEditor.twitter}}</a>
+                    </div>
+                    <p>{{inspectedEditor.biography}}</p>
+                    <a @click="fullEditorList" class="cta btn waves-effect waves-light">See All Editors</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="clients">
+
+        </section>
+
+    </main>
+    <footer>
+
+    </footer>
+
+    <script src="./node_modules/materialize-css/dist/js/materialize.min.js"></script>
+    <script src='./node_modules/vue/dist/vue.min.js'></script>
+    <script src="./scripts/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var elems = document.querySelectorAll('.sidenav');
+            var instances = M.Sidenav.init(elems);
+        });
+    </script>
+</body>
+
+</html>
+
