@@ -1,5 +1,10 @@
 Vue.config.devtools = true
 
+document.addEventListener('DOMContentLoaded', function () {
+    var elems = document.querySelectorAll('.sidenav');
+    var instances = M.Sidenav.init(elems);
+});
+
 const editorDiv = document.getElementById('editors');
 
 const app = new Vue ({
@@ -100,5 +105,33 @@ const app = new Vue ({
         scrollToTop: function() {
             window.scrollTo(0, this.$el.offsetTop);
         }
+    }
+});
+
+const clients = new Vue({
+    el: '#clients',
+    data: {
+        clients: [
+            {
+                name: 'TFBlade',
+                youtube: 'https://www.youtube.com/channel/UCNEmy4a6O2q0ZCz7Qi2MThA',
+                picture: 'assets/clients/person.png'
+            },
+            {
+                name: 'RedMercy',
+                youtube: 'https://www.youtube.com/channel/UCUf53DHwoQw4SvETXZQ2Tmg',
+                picture: 'assets/clients/person.png'
+            },
+            {
+                name: 'Professor Akali',
+                youtube: 'https://www.youtube.com/channel/UCDIJhfKjVYlbo5-oQvM5EqQ',
+                picture: 'assets/clients/person.png'
+            },
+            {
+                name: 'Glacierr',
+                youtube: 'https://www.youtube.com/channel/UCN7x-gVHN_AO0DMtBWMxN3Q',
+                picture: 'assets/clients/person.png'
+            }
+        ]
     }
 });

@@ -42,6 +42,9 @@
                             <a href="#editors">Staff</a>
                         </li>
                         <li>
+                            <a href="#testimonials">Testimonials</a>
+                        </li>
+                        <li>
                             <a href="#clients">Clients</a>
                         </li>
                         <li>
@@ -59,6 +62,9 @@
             </li>
             <li>
                 <a href="#editors">Staff</a>
+            </li>
+            <li>
+                <a href="#testimonials">Testimonials</a>
             </li>
             <li>
                 <a href="#clients">Clients</a>
@@ -120,7 +126,7 @@
             <h3>The Team</h3>
             <transition name="fade">
                 <!-- List of editors -->
-                <div v-if="fullList" key="1" class="editorList">
+                <div v-if="fullList" key="1" class="editorList container">
                     <div class="editor" v-for="editor in editors">
                         <!-- <img @click="editorView(editor)" :src="editor.picture" alt="editor.name">
                         <h6>{{editor.name}}</h6>
@@ -136,7 +142,7 @@
                 </div>
 
                 <!-- Single editor inspection -->
-                <div class="inspectedEditor" v-else key="2">
+                <div class="inspectedEditor container" v-else key="2">
                     <img :src="inspectedEditor.picture" :alt="inspectedEditor.name">
                     <div class="editorInfo">
                         <h3>{{inspectedEditor.name}}</h3>
@@ -153,7 +159,7 @@
         </section>
 
         <!-- Clients and testimonies -->
-        <section id="clients">
+        <section id="testimonials">
             <div class="picture-left span-row-2">
                 <img src="assets/clients/person.png" alt="">
             </div>
@@ -180,9 +186,46 @@
                 Accusantium, nihil.</blockquote>
         </section>
 
+        <section id="clients">
+            <h3>Clients</h3>
+            <div class="clientList container">
+                <a :href="client.youtube" target="_blank" class="client" v-for="client in clients" :style="{ backgroundImage: 'url(' + client.picture +')'}">
+                    <div class="clientInfo">
+                        <h6>{{client.name}}</h6>
+                    </div>
+                </a>
+            </div>
+            <a href="#contact" class="cta btn waves-effect waves-light">Join The List</a>
+        </section>
+
         <!-- Contact Form -->
         <section id="contact">
+            <h3>Hit Us Up</h3>
+            <form class="container col s12" id="ajax-contact" method="post" action="mailer.php">
+                <div class="row">
+                    <div class="field col s6">
+                        <i class="material-icons prefix">account_circle</i>
+                        <label for="name">Name:</label>
+                        <input class="validate" type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="field col s6">
+                        <i class="material-icons prefix">email</i>
+                        <label for="email">Email:</label>
+                        <input class="validate" type="email" id="email" name="email" required>
+                    </div>
+                </div>
+                <div class="field textarea">
+                    <i class="material-icons prefix">message</i>
+                    <label for="message">Message:</label>
+                    <textarea rows="5" cols="25" id="message" name="message" required></textarea>
+                </div>
 
+                <div class="field">
+                    <button class="btn waves-effect waves-light" type="submit">Send</button>
+                </div>
+            </form>
+            <div id="form-messages"></div>
         </section>
 
     </main>
@@ -192,12 +235,9 @@
 
     <script src="./node_modules/materialize-css/dist/js/materialize.min.js"></script>
     <script src='./node_modules/vue/dist/vue.min.js'></script>
+    <script src='./node_modules/jquery/dist/jquery.min.js'></script>
     <script src="./scripts/main.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var elems = document.querySelectorAll('.sidenav');
-            var instances = M.Sidenav.init(elems);
-        });
     </script>
 </body>
 
