@@ -1,0 +1,139 @@
+// Editors Section
+#editors {
+    width: 100vw;
+    min-height: 100vh;
+    padding-bottom: 5%;
+    background-color: $SnowBlue;
+    transition: all .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    h3 {
+        text-align: center;
+        padding-top: 1%;
+    }
+    .editorList {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        padding-top: 2%;
+        width: 80%;
+        margin: auto 0;
+        .editor {
+            width: 33%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding-bottom: 3%;
+            // img {
+            //     width: 50%;
+            //     border-radius: 100%;
+            //     cursor: pointer;
+            //     position: relative;
+            // }
+            .singleEditor {
+                width: 350px;
+                height: 350px;
+                background-size: cover;
+                background-repeat: no-repeat;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                @include transition(background-color 0.3s ease);
+                .editorContent {
+                    width: 70%;
+                    height: 50%;
+                    display: none;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    position: relative;
+                    h6 {
+                        font-size: 1.8rem;
+                        font-weight: bold;
+                    }
+                    p {
+                        font-size: 1.4rem;
+                        width: 80%;
+                        text-align: center;
+                    }
+                }
+                .editorContent::before {
+                    content: '';
+                    position: absolute;
+                    border-radius: 100% 0 0 0;
+                    top: 0;
+                    left: 0;
+                    width: 50%;
+                    height: 50%;
+                    border-top: 1px solid black;
+                    border-left: 1px solid black;
+                }
+                .editorContent::after {
+                    content: '';
+                    position: absolute;
+                    border-radius: 0 0 100% 0;
+                    bottom: 0;
+                    right: 0;
+                    width: 50%;
+                    height: 50%;
+                    border-bottom: 1px solid black;
+                    border-right: 1px solid black;
+                }
+                .editorContent:hover::before, .editorContent:hover::after {
+                    animation-duration: 1s;
+                    animation-name: grow;
+                    animation-iteration-count: infinite;
+                }
+            }
+            .singleEditor:hover {
+                background-image: none !important;
+                background-color: $LeafGreen;
+            }
+            .singleEditor:hover .editorContent {
+                display: flex;
+            }
+        }
+    }
+    .inspectedEditor {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        padding-top: 10%;
+        img {
+            width: 20%;
+            border-radius: 100%;
+            margin-right: 5%;
+        }
+        .editorInfo {
+            width: 50%;
+            height: 80%;
+            h3 {
+                text-align: left;
+                padding-bottom: 3%;
+            }
+            div {
+                height: 15%;
+                h6 {
+                    padding-bottom: 3%;
+                }
+                a {
+                    padding-bottom: 3%;
+                }
+            }
+            p {
+                padding-bottom: 3%;
+            }
+        }
+    }
+    a {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+}

@@ -1,0 +1,36 @@
+// Hero Section
+
+.hero {
+    position: relative;
+    background-color: $PrimaryPeach;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    img {
+        width: 50%;
+        opacity: 0;
+        animation-duration: 1.5s;
+        animation-name: fadeIn;
+        animation-fill-mode: forwards;
+    }
+    h3 {
+        opacity: 0;
+        animation-delay: 1.3s;
+        animation-duration: 1.5s;
+        animation-name: fadeIn;
+        animation-fill-mode: forwards;
+    }
+    i {
+        position: absolute;
+        bottom: 4%;
+        left: 50%;
+        opacity: 0;
+        animation-delay: 3s;
+        animation-duration: 1s;
+        animation-name: fadeIn;
+        animation-fill-mode: forwards;
+    }
+}

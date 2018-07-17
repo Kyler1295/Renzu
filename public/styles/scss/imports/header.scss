@@ -1,0 +1,20 @@
+// Header Styles
+
+nav {
+    background-color: transparent;
+    box-shadow: none;
+    top: -64px;
+    animation-delay: 2.8s;
+    animation-duration: .5s;
+    animation-name: slideDown;
+    animation-fill-mode: forwards;
+}
+.brand-logo {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.logo {
+    width: 38%;
+    margin-top: 2%;
+}
