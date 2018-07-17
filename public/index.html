@@ -100,6 +100,7 @@
 
         <section id="editors">
             <h3>The Team</h3>
+            
             <div v-if="fullList" class="editorList">
                 <div class="editor" v-for="editor in editors">
                     <img @click="editorView(editor)" :src="editor.picture" alt="editor.name">
@@ -108,6 +109,7 @@
                     <p>Position: {{editor.position}}</p>
                 </div>
             </div>
+
             <div class="inspectedEditor" v-else>
                 <img :src="inspectedEditor.picture" :alt="inspectedEditor.name">
                 <div class="editorInfo">
