@@ -5,13 +5,15 @@ const editorDiv = document.getElementById('editors');
 const app = new Vue ({
     el: '#editors',
     data: {
+        // Determines if full list of editors is shown
         fullList: true,
+        // Editors List
         editors: [
             {
                 name: 'KiNG',
                 twitter: '@DKEditing',
                 twitterURL: 'https://twitter.com/DKEditing',
-                picture: 'assets/Staff/King.jpg',
+                picture: 'assets/Staff/King.png',
                 biography: 'I\'m KiNG, I started editing around 4 years ago making Youtube videos on my own. My love for Editing grew and eventually I wanted nothing more than to become a professional editor. I\'ve Edited for large creators and organizations such as Redmercy and Immortals, now I own Renzu. I started Renzu because I, like many others noticed a track record of Editors being poorly treated and poorly compensated. Editors that wanted nothing more than to have it be their full time job, but weren\'t being paid fairly, and thus could\'t sustain themselves; I set out to put a stop to this by creating Renzu as a Team and Community of Media professionals that can come together and support each other. My main goal is to have everyone around me thrive, both employees, and clients. At Renzu, no one is left behind.',
                 position: 'Owner/Editor'
             },
@@ -35,9 +37,17 @@ const app = new Vue ({
                 name: 'ZeroInfinity',
                 twitter: '@ZeroInfinityLoL',
                 twitterURL: 'https://twitter.com/zeroinfinitylol',
-                picture: 'assets/Staff/Zero.jpg',
+                picture: 'assets/Staff/Zero.png',
                 biography: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium reiciendis repellat expedita ducimus a asperiores quos dolorum, eligendi consectetur modi.',
                 position: 'Editor'
+            },
+            {
+                name: 'Yomuus',
+                twitter: '@YoumuusYT',
+                twitterURL: 'https://twitter.com/YoumuusYT',
+                picture: 'assets/Staff/Youmuus.jpg',
+                biography: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium reiciendis repellat expedita ducimus a asperiores quos dolorum, eligendi consectetur modi.',
+                position: 'Brand Advisor'
             },
             {
                 name: 'Ashe',
@@ -56,6 +66,7 @@ const app = new Vue ({
                 position: 'Developer'
             }
         ],
+        // Inspected Editor Object
         inspectedEditor: {
             name: '',
             twitter: '',
@@ -66,11 +77,13 @@ const app = new Vue ({
         }
     },
     methods: {
+        // Sets the inspected Editor to editor picked and disables full list
         editorView: function(editor) {
             this.fullList = false;
             this.inspectedEditor = {...editor};
             this.scrollToTop();
         },
+        // Sets the full editor list back to true and resets the inspected editor
         fullEditorList: function() {
             this.fullList = true;
             this.inspectedEditor = {
@@ -83,6 +96,7 @@ const app = new Vue ({
                 inspected: true
             };
         },
+        // Scrolls to the top of the editor section
         scrollToTop: function() {
             window.scrollTo(0, this.$el.offsetTop);
         }

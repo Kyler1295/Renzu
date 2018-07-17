@@ -7,6 +7,25 @@ $SnowBlue: #d8ebe6;
 $PastelGreen: #64bfa4;
 $LeafGreen: #00b694;
 
+// Mixins
+// Transform
+@mixin transform($property) {
+    -webkit-transform: $property;
+        -ms-transform: $property;
+         -o-transform: $property;
+            transform: $property;
+}
+
+// Transition
+@mixin transition($property) {
+    -webkit-transition: $property;
+        -ms-transition: $property;
+         -o-transition: $property;
+            transition: $property;
+}
+
+// All Selector
+
 * {
     margin: 0;
     padding: 0;
@@ -157,9 +176,7 @@ main {
             -webkit-transform-origin: 100% 0;
             -ms-transform-origin: 100% 0;
             transform-origin: 100% 0;
-            -webkit-transform: skew(-45deg);
-            -ms-transform: skew(-45deg);
-            transform: skew(-45deg);
+            @include transform(skew(-45deg));
             z-index: 1;
         }
         .callOutRight {
@@ -223,9 +240,8 @@ main {
             -webkit-transform-origin: 100% 0;
             -ms-transform-origin: 100% 0;
             transform-origin: 100% 0;
-            -webkit-transform: skew(45deg);
-            -ms-transform: skew(45deg);
-            transform: skew(45deg);
+            @include transform(skew(45deg));
+
             z-index: 1;
         }
     }
@@ -235,8 +251,13 @@ main {
     #editors {
         width: 100vw;
         min-height: 100vh;
+        padding-bottom: 5%;
         background-color: $SnowBlue;
         transition: all .3s ease-in-out;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
         h3 {
             text-align: center;
             padding-top: 1%;
@@ -247,6 +268,8 @@ main {
             align-items: flex-start;
             flex-wrap: wrap;
             padding-top: 2%;
+            width: 80%;
+            margin: auto 0;
             .editor {
                 width: 33%;
                 display: flex;
@@ -254,11 +277,75 @@ main {
                 align-items: center;
                 flex-direction: column;
                 padding-bottom: 3%;
-                img {
-                    width: 50%;
+                // img {
+                //     width: 50%;
+                //     border-radius: 100%;
+                //     cursor: pointer;
+                //     position: relative;
+                // }
+                .singleEditor {
+                    width: 350px;
+                    height: 350px;
+                    background-size: cover;
+                    background-repeat: no-repeat;
                     border-radius: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
                     cursor: pointer;
-                    position: relative;
+                    @include transition(background-color 0.3s ease);
+                    .editorContent {
+                        width: 70%;
+                        height: 50%;
+                        display: none;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        position: relative;
+                        h6 {
+                            font-size: 1.8rem;
+                            font-weight: bold;
+                        }
+                        p {
+                            font-size: 1.4rem;
+                            width: 80%;
+                            text-align: center;
+                        }
+                    }
+                    .editorContent::before {
+                        content: '';
+                        position: absolute;
+                        border-radius: 100% 0 0 0;
+                        top: 0;
+                        left: 0;
+                        width: 50%;
+                        height: 50%;
+                        border-top: 1px solid black;
+                        border-left: 1px solid black;
+                    }
+                    .editorContent::after {
+                        content: '';
+                        position: absolute;
+                        border-radius: 0 0 100% 0;
+                        bottom: 0;
+                        right: 0;
+                        width: 50%;
+                        height: 50%;
+                        border-bottom: 1px solid black;
+                        border-right: 1px solid black;
+                    }
+                    .editorContent:hover::before, .editorContent:hover::after {
+                        animation-duration: 1s;
+                        animation-name: grow;
+                        animation-iteration-count: infinite;
+                    }
+                }
+                .singleEditor:hover {
+                    background-image: none !important;
+                    background-color: $LeafGreen;
+                }
+                .singleEditor:hover .editorContent {
+                    display: flex;
                 }
             }
         }
@@ -294,6 +381,10 @@ main {
                 }
             }
         }
+        a {
+            padding-left: 2%;
+            padding-right: 2%;
+        }
     }
 
 
@@ -301,7 +392,53 @@ main {
     #clients {
         width: 100vw;
         height: 100vh;
-        background-color: $SnowBlue;
+        background-color: $LeafGreen;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 10px;
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+    .span-col-2{
+        grid-column: span 2/ auto;
+    }
+    .span-row-2 {
+        grid-row: span 2/ auto;
+    }
+    .picture-left {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        img {
+            border-radius: 100%;
+        }
+    }
+    .picture-right {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        img {
+            border-radius: 100%;
+        }
+        padding-top: 5%;
+    }
+    .text-left {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        height: 50%;
+        margin-top: 9%;
+        border-left: 5px solid $PrimaryPeach;
+    }
+    .text-right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: right;
+        border-right: 5px solid $PrimaryPeach;
+        border-left: none !important;
+        height: 50%;
+        padding-right: 3%;
     }
 
 
@@ -313,6 +450,58 @@ footer {
 
 // Media Queries
 
+@media only screen and (max-width: 1760px) {
+    .callOutRightSlant {
+        .callOutLeft::after {
+            left: 90%;
+        }
+    }
+    .callOutLeftSlant {
+        .callOutRight::before {
+            right: 100%;
+        }
+    }
+}
+
+// MacBook 13Inch
+@media only screen and (max-width: 1440px) {
+    .callOutRightSlant {
+        .callOutLeft::after {
+            width: 130%;
+            left: 80%;
+        }
+    }
+    .callOutLeftSlant {
+        .callOutRight::before {
+            right: 100%;
+        }
+    }
+
+    #editors {
+        .editorList {
+            .editor {
+                .singleEditor {
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .callOutRightSlant {
+        .callOutLeft::after {
+            left: 100%;
+        }
+    }
+    .callOutLeftSlant {
+        .callOutRight::before {
+            width: 130%;
+            right: 100%;
+        }
+    }
+}
 
 @media only screen and (max-width: 1025px) {
     .hero {
@@ -321,25 +510,40 @@ footer {
         }
     }
     .callOutRightSlant {
+        padding-top: 0;
         flex-direction: column;
         .callOutRight {
             width: 100%;
             height: 50%;
+            padding-top: 0;
+            img {
+                height: 100%;
+                padding-top: 0;
+            }
         }
         .callOutLeft {
             width: 100%;
             height: 50%;
+            
         }
     }
     .callOutLeftSlant {
         flex-directioN: column-reverse;
+        padding-top: 0;
+        padding-bottom: 0;
         .callOutRight {
             width: 100%;
             height: 50%;
+            
         }
         .callOutLeft {
             width: 100%;
             height: 50%;
+            padding-top: 0;
+            img {
+                height: 100%;
+                padding-top: 0;
+            }
         }
     }
     
@@ -349,12 +553,35 @@ footer {
     .callOutLeft::after {
         display: none;
     }
+
+    #editors {
+        min-height: 80vh;
+        h3 {
+            padding-top: 3%;
+        }
+        .editorList {
+            margin-top: 3%;
+        }
+    }
 }
+
 
 @media only screen and (max-width: 768px) {
     .hero {
         h3 {
             font-size: 2.3rem;
+        }
+    }
+
+    #editors {
+        min-height: 60vh;
+        .editorList {
+            .editor {
+                .singleEditor {
+                    width: 125px;
+                    height: 125px;
+                }
+            }
         }
     }
 }
@@ -386,6 +613,14 @@ footer {
             }
             p {
                 font-size: .6rem;
+            }
+        }
+    }
+
+    #editors {
+        .editorList {
+            .editor {
+                width: 40%;
             }
         }
     }
@@ -475,4 +710,44 @@ footer {
     100% {
         top: 0px;
     }
+}
+
+@keyframes grow {
+    0% {
+        transform: scale(1);
+    }
+    15% {
+        transform: scale(1.1);
+    }
+    25% {
+        transform: scale(1.2);
+    }
+    35% {
+        transform: scale(1.25);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+    65% {
+        transform: scale(1.25);
+    }
+    75% {
+        transform: scale(1.2);
+    }
+    85% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+    
+}
+
+// Animations
+
+.fade-enter-active, .fade-leave-active {
+    transition: opacity .5s;
+}
+.fade-enter, .fade-leave-to {
+    opacity: 0;
 }
