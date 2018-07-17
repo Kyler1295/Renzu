@@ -43,7 +43,7 @@ const app = new Vue ({
                 twitter: '@ZeroInfinityLoL',
                 twitterURL: 'https://twitter.com/zeroinfinitylol',
                 picture: 'assets/Staff/Zero.png',
-                biography: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium reiciendis repellat expedita ducimus a asperiores quos dolorum, eligendi consectetur modi.',
+                biography: 'Hey! My name\'s João, also know as Zero Infinity. I have been editing for around 4 years now, combining two of my biggest passions, video editing and gaming. After years of developing my skills, I started producing content for several personalities and organizations, such as Locodoco and FoxdropLoL and even had the fortune to participate in the Youtube Creators Lab 2.0, hosted by Riot Games. I greatly enjoy the aspects of Motion Graphics and 3D Animations and hope to able to inspire others, to follow their passions with my work.',
                 position: 'Editor'
             },
             {
