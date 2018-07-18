@@ -11,6 +11,8 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="styles/css/normalize.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="styles/css/aos.css">
     <!-- Materialize CSS StyleSheet -->
     <link rel="stylesheet" href="styles/css/materialize.min.css">
     <!-- Base CSS Stylesheet -->
@@ -36,19 +38,19 @@
                     <!-- Navigation Options -->
                     <ul class="right hide-on-med-and-down">
                         <li>
-                            <a href="#hero">Home</a>
+                            <a class="navText" href="#hero">Home</a>
                         </li>
                         <li>
-                            <a href="#editors">Staff</a>
+                            <a class="navText" href="#editors">Staff</a>
                         </li>
                         <li>
-                            <a href="#testimonials">Testimonials</a>
+                            <a class="navText" href="#testimonials">Testimonials</a>
                         </li>
                         <li>
-                            <a href="#clients">Clients</a>
+                            <a class="navText" href="#clients">Clients</a>
                         </li>
                         <li>
-                            <a href="#contact">Contact</a>
+                            <a class="navText" href="#contact">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -79,7 +81,7 @@
         <!-- Hero Section -->
         <section class="hero" id="hero">
             <!-- Hero Image -->
-            <img class="LogoText" src="./assets/LogoText.png" alt="Renzu">
+            <img class="LogoText" src="./assets/GreenText2000.png" alt="Renzu">
             <!-- TagLine -->
             <h3 class="tagLine">Your Success, Our Passion.</h3>
             <!-- Down Arrow -->
@@ -87,7 +89,7 @@
         </section>
 
         <!-- First Callout -->
-        <section class="callOutRightSlant">
+        <section class="callOutRightSlant" data-aos="fade-right" data-aos-duration="1000">
 
             <!-- Callout Text -->
             <div class="callOutLeft">
@@ -100,15 +102,15 @@
             </div>
             <!-- Callout Image -->
             <div class="callOutRight">
-                <img src="./assets/placeholder.jpg" alt="#">
+                <img src="./assets/placeholder.jpg" alt="#" data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
             </div>
         </section>
 
         <!-- Second Callout -->
-        <section class="callOutLeftSlant">
+        <section class="callOutLeftSlant" data-aos="fade-left" data-aos-delay="750" data-aos-duration="1000">
             <!-- Callout Image -->
             <div class="callOutLeft">
-                <img src="./assets/placeholder.jpg" alt="#">
+                <img src="./assets/placeholder.jpg" alt="#" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">
             </div>
             <!-- Callout Text -->
             <div class="callOutRight">
@@ -160,28 +162,28 @@
 
         <!-- Clients and testimonies -->
         <section id="testimonials">
-            <div class="picture-left span-row-2">
+            <div class="picture-left span-row-2" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
                 <img src="assets/clients/person.png" alt="">
             </div>
-            <blockquote class="span-col-2 text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis at. Minima aperiam dolore voluptatibus,
+            <blockquote class="span-col-2 text-left" data-aos="zoom-in-" data-aos-delay="500" data-aos-duration="500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis at. Minima aperiam dolore voluptatibus,
                 nam debitis delectus at voluptatem, consequuntur voluptate, quos veniam dolores facere explicabo asperiores.
                 Accusantium, nihil.</blockquote>
-            <div class="picture-right span-row-2">
+            <div class="picture-right span-row-2" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
                 <img src="assets/clients/person.png" alt="">
             </div>
-            <blockquote class="span-col-2 text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis at. Minima aperiam dolore voluptatibus,
+            <blockquote class="span-col-2 text-right" data-aos="zoom-in-" data-aos-delay="500" data-aos-duration="500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis at. Minima aperiam dolore voluptatibus,
                 nam debitis delectus at voluptatem, consequuntur voluptate, quos veniam dolores facere explicabo asperiores.
                 Accusantium, nihil.</blockquote>
-            <div class="picture-left span-row-2">
+            <div class="picture-left span-row-2" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
                 <img src="assets/clients/person.png" alt="">
             </div>
-            <blockquote class="span-col-2 text-left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis at. Minima aperiam dolore voluptatibus,
+            <blockquote class="span-col-2 text-left" data-aos="zoom-in-" data-aos-delay="500" data-aos-duration="500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis at. Minima aperiam dolore voluptatibus,
                 nam debitis delectus at voluptatem, consequuntur voluptate, quos veniam dolores facere explicabo asperiores.
                 Accusantium, nihil.</blockquote>
-            <div class="picture-right span-row-2">
+            <div class="picture-right span-row-2" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
                 <img src="assets/clients/person.png" alt="">
             </div>
-            <blockquote class="span-col-2 text-right" style="height: 60%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis at. Minima aperiam dolore voluptatibus,
+            <blockquote class="span-col-2 text-right" data-aos="zoom-in-" data-aos-delay="500" data-aos-duration="500" style="height: 60%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis at. Minima aperiam dolore voluptatibus,
                 nam debitis delectus at voluptatem, consequuntur voluptate, quos veniam dolores facere explicabo asperiores.
                 Accusantium, nihil.</blockquote>
         </section>
@@ -200,8 +202,8 @@
 
         <!-- Contact Form -->
         <section id="contact">
-            <h3>Hit Us Up</h3>
-            <form class="container col s12" id="ajax-contact" method="post" action="mailer.php">
+            <h3 data-aos="fade-right" data-aos-delay="250" data-aos-duration="1000">Hit Us Up</h3>
+            <form class="container col s12" id="ajax-contact" method="post" action="mailer.php" data-aos="zoom-in-right" data-aos-delay="500" data-aos-duration="750">
                 <div class="row">
                     <div class="field col s6">
                         <i class="material-icons prefix">account_circle</i>
@@ -236,6 +238,7 @@
     <script src="scripts/materialize.min.js"></script>
     <script src='scripts/vue.min.js'></script>
     <script src='scripts/jquery.min.js'></script>
+    <script src="scripts/aos.js"></script>
     <script src="scripts/main.js"></script>
     <script>
     </script>

@@ -5,9 +5,15 @@ document.addEventListener('DOMContentLoaded', function () {
     var instances = M.Sidenav.init(elems);
 });
 
+AOS.init();
+
+var _ = (className) => {return document.querySelector(className)}
+
 const editorDiv = document.getElementById('editors');
-const nav = document.querySelector('nav');
-const logo = document.querySelector('.logo');
+const nav = _('nav');
+const logo = _('.logo');
+const navItems = document.querySelectorAll('.navText');
+
 
 const app = new Vue ({
     el: '#editors',
@@ -172,10 +178,18 @@ const clients = new Vue({
 
 window.addEventListener('scroll', function() {
     if(window.pageYOffset > 100){
-        nav.style.backgroundColor = '#ffffff';
-        logo.src = 'assets/LogoWithText150.png';
+        nav.style.backgroundColor = '#64bfa4';
+        logo.src = 'assets/GreenLogoWithText150.png';
+        for(let i = 0; i < navItems.length; i++){
+            navItems[i].style.color = '#ffffff';
+        }
     } else {
         nav.style.backgroundColor = 'transparent';
         logo.src = 'assets/Logo150.png';
+        for(let i = 0; i < navItems.length; i++){
+            navItems[i].style.color = '#000000';
+        }
     }
 });
+
+
