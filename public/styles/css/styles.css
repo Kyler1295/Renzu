@@ -34,7 +34,8 @@ a {
   background-color: #00b694; }
 
 main {
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 nav {
   background-color: transparent;
