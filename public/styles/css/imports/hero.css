@@ -1,0 +1,32 @@
+.hero {
+  position: relative;
+  background-color: #faceb5;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  .hero img {
+    width: 50%;
+    opacity: 0;
+    animation-duration: 1.5s;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards; }
+  .hero h3 {
+    opacity: 0;
+    animation-delay: 1.3s;
+    animation-duration: 1.5s;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards; }
+  .hero i {
+    position: absolute;
+    bottom: 4%;
+    left: 50%;
+    opacity: 0;
+    animation-delay: 3s;
+    animation-duration: 1s;
+    animation-name: fadeIn;
+    animation-fill-mode: forwards; }
+
+/*# sourceMappingURL=hero.css.map */

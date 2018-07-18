@@ -1,3 +1,4 @@
+@import 'imports/colors';
 // Header Styles
 
 nav {
@@ -8,6 +9,7 @@ nav {
     animation-duration: .5s;
     animation-name: slideDown;
     animation-fill-mode: forwards;
+    @include transition(background-color .5s ease);
 }
 .brand-logo {
     display: flex;

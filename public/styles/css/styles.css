@@ -31,6 +31,9 @@ a {
 .btn:hover {
   background-color: #00b694; }
 
+main {
+  position: relative; }
+
 nav {
   background-color: transparent;
   box-shadow: none;
@@ -38,7 +41,11 @@ nav {
   animation-delay: 2.8s;
   animation-duration: .5s;
   animation-name: slideDown;
-  animation-fill-mode: forwards; }
+  animation-fill-mode: forwards;
+  -webkit-transition: background-color 0.5s ease;
+  -ms-transition: background-color 0.5s ease;
+  -o-transition: background-color 0.5s ease;
+  transition: background-color 0.5s ease; }
 
 .brand-logo {
   display: flex;
@@ -48,9 +55,6 @@ nav {
 .logo {
   width: 38%;
   margin-top: 2%; }
-
-main {
-  position: relative; }
 
 .hero {
   position: relative;
@@ -259,10 +263,6 @@ main {
           height: 50%;
           border-bottom: 1px solid black;
           border-right: 1px solid black; }
-        #editors .editorList .editor .singleEditor .editorContent:hover::before, #editors .editorList .editor .singleEditor .editorContent:hover::after {
-          animation-duration: 1s;
-          animation-name: grow;
-          animation-iteration-count: infinite; }
       #editors .editorList .editor .singleEditor:hover {
         background-image: none !important;
         background-color: #00b694; }
@@ -354,6 +354,7 @@ main {
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
+    flex-wrap: wrap;
     position: relative;
     padding: 5%; }
   #clients .clientList::before {
@@ -378,7 +379,8 @@ main {
     width: 200px;
     height: 200px;
     border-radius: 100%;
-    background-size: cover; }
+    background-size: cover;
+    margin-bottom: 2%; }
     #clients .client .clientInfo {
       width: 100%;
       height: 100%;

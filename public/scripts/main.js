@@ -6,6 +6,8 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 const editorDiv = document.getElementById('editors');
+const nav = document.querySelector('nav');
+const logo = document.querySelector('.logo');
 
 const app = new Vue ({
     el: '#editors',
@@ -13,14 +15,24 @@ const app = new Vue ({
         // Determines if full list of editors is shown
         fullList: true,
         // Editors List
+
+        // Editor Object
+        // {
+        //     name: '',
+        //     twitter: '',
+        //     twitterURL: '',
+        //     picture: '',
+        //     biography: '',
+        //     position: ''
+        // },
         editors: [
             {
                 name: 'KiNG',
                 twitter: '@DKEditing',
                 twitterURL: 'https://twitter.com/DKEditing',
                 picture: 'assets/Staff/King.png',
-                biography: 'I\'m KiNG, I started editing around 4 years ago making Youtube videos on my own. My love for Editing grew and eventually I wanted nothing more than to become a professional editor. I\'ve Edited for large creators and organizations such as Redmercy and Immortals, now I own Renzu. I started Renzu because I, like many others noticed a track record of Editors being poorly treated and poorly compensated. Editors that wanted nothing more than to have it be their full time job, but weren\'t being paid fairly, and thus could\'t sustain themselves; I set out to put a stop to this by creating Renzu as a Team and Community of Media professionals that can come together and support each other. My main goal is to have everyone around me thrive, both employees, and clients. At Renzu, no one is left behind.',
-                position: 'Owner/Editor'
+                biography: 'I\'m KiNG, I started editing around 4 years ago making Youtube videos on my own. My love for Editing grew and eventually I wanted nothing more than to become a professional editor. I\'ve Edited for large creators and organizations such as Redmercy and Immortals, now I own Renzu. I started Renzu because I, like many others noticed a track record of Editors being poorly treated and poorly compensated. Editors that wanted nothing more than to have it be their full time job, but weren\'t being paid fairly, and thus couldn\'t sustain themselves; I set out to put a stop to this by creating Renzu as a Team and Community of Media professionals that can come together and support each other. My main goal is to have everyone around me thrive, both employees, and clients. At Renzu, no one is left behind.',
+                position: 'CEO/Editor'
             },
             {
                 name: 'RimFrost',
@@ -36,7 +48,7 @@ const app = new Vue ({
                 twitterURL: 'https://twitter.com/snowbirdtbh',
                 picture: 'assets/Staff/Snowbird.jpg',
                 biography: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium reiciendis repellat expedita ducimus a asperiores quos dolorum, eligendi consectetur modi.',
-                position: 'Editor'
+                position: 'COO/Editor'
             },
             {
                 name: 'ZeroInfinity',
@@ -44,6 +56,22 @@ const app = new Vue ({
                 twitterURL: 'https://twitter.com/zeroinfinitylol',
                 picture: 'assets/Staff/Zero.png',
                 biography: 'Hey! My name\'s João, also know as Zero Infinity. I have been editing for around 4 years now, combining two of my biggest passions, video editing and gaming. After years of developing my skills, I started producing content for several personalities and organizations, such as Locodoco and FoxdropLoL and even had the fortune to participate in the Youtube Creators Lab 2.0, hosted by Riot Games. I greatly enjoy the aspects of Motion Graphics and 3D Animations and hope to able to inspire others, to follow their passions with my work.',
+                position: 'Editor'
+            },
+            {
+                name: 'igb',
+                twitter: '@igb_',
+                twitterURL: 'https://twitter.com/igbCC',
+                picture: 'assets/Staff/igb.png',
+                biography: 'tbd',
+                position: 'Editor'
+            },
+            {
+                name: 'Ryscu',
+                twitter: '@Ryscu_',
+                twitterURL: 'https://twitter.com/Ryscu_',
+                picture: 'assets/Staff/Ryscu.jpg',
+                biography: 'tbd',
                 position: 'Editor'
             },
             {
@@ -131,7 +159,23 @@ const clients = new Vue({
                 name: 'Glacierr',
                 youtube: 'https://www.youtube.com/channel/UCN7x-gVHN_AO0DMtBWMxN3Q',
                 picture: 'assets/clients/person.png'
+            },
+            
+            {
+                name: 'Flyerbek',
+                youtube: 'https://www.youtube.com/FLYERBEKLOL',
+                picture: 'assets/clients/person.png'
             }
         ]
+    }
+});
+
+window.addEventListener('scroll', function() {
+    if(window.pageYOffset > 100){
+        nav.style.backgroundColor = '#ffffff';
+        logo.src = 'assets/LogoWithText150.png';
+    } else {
+        nav.style.backgroundColor = 'transparent';
+        logo.src = 'assets/Logo150.png';
     }
 });

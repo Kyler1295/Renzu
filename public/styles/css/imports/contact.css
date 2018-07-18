@@ -1,0 +1,25 @@
+#contact {
+  background-color: #faceb5;
+  height: 60vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3%;
+  padding-bottom: 3%; }
+  #contact h3 {
+    margin-bottom: 3%; }
+  #contact label {
+    font-size: 1.5rem; }
+  #contact form {
+    height: 80%; }
+    #contact form .textarea {
+      height: 50%; }
+    #contact form button {
+      margin-top: 5%; }
+
+textarea {
+  height: 100%; }
+
+/*# sourceMappingURL=contact.css.map */
