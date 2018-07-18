@@ -1,6 +1,6 @@
 #testimonials {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #faceb5;
   display: grid;
   grid-template-columns: repeat(4, 1fr);

@@ -9,7 +9,7 @@ AOS.init();
 
 var _ = (className) => {return document.querySelector(className)}
 
-const editorDiv = document.getElementById('editors');
+const editorDiv = _('.editors');
 const nav = _('nav');
 const logo = _('.logo');
 const navItems = document.querySelectorAll('.navText');
@@ -137,7 +137,8 @@ const app = new Vue ({
         },
         // Scrolls to the top of the editor section
         scrollToTop: function() {
-            window.scrollTo(0, this.$el.offsetTop);
+            console.log(editorDiv);
+            window.scrollTo(0, (editorDiv.offsetTop - 35));
         }
     }
 });

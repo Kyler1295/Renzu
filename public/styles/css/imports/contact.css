@@ -17,7 +17,8 @@
     #contact form .textarea {
       height: 50%; }
     #contact form button {
-      margin-top: 5%; }
+      margin-top: 5%;
+      width: 20%; }
 
 textarea {
   height: 100%; }

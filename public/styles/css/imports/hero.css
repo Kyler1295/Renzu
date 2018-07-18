@@ -18,7 +18,8 @@
     animation-delay: 1.3s;
     animation-duration: 1.5s;
     animation-name: fadeIn;
-    animation-fill-mode: forwards; }
+    animation-fill-mode: forwards;
+    font-size: 1.5rem; }
   .hero i {
     position: absolute;
     bottom: 4%;

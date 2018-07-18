@@ -83,7 +83,7 @@
             <!-- Hero Image -->
             <img class="LogoText" src="./assets/GreenText2000.png" alt="Renzu">
             <!-- TagLine -->
-            <h3 class="tagLine">Your Success, Our Passion.</h3>
+            <h3 class="tagLine">An all in one solution to video production for streamers and influencers</h3>
             <!-- Down Arrow -->
             <i class="material-icons downwardArrow">arrow_downward</i>
         </section>
@@ -124,43 +124,45 @@
         </section>
 
         <!-- Staff Section -->
-        <section id="editors">
-            <h3>The Team</h3>
-            <transition name="fade">
-                <!-- List of editors -->
-                <div v-if="fullList" key="1" class="editorList container">
-                    <div class="editor" v-for="editor in editors">
-                        <!-- <img @click="editorView(editor)" :src="editor.picture" alt="editor.name">
+        <div class="editors" data-aos="fade-in" data-aos-delay="500" data-aos-duration="1500">
+            <section id="editors">
+                <h3>The Team</h3>
+                <transition name="fade">
+                    <!-- List of editors -->
+                    <div v-if="fullList" key="1" class="editorList container">
+                        <div class="editor" v-for="editor in editors">
+                            <!-- <img @click="editorView(editor)" :src="editor.picture" alt="editor.name">
                         <h6>{{editor.name}}</h6>
                         <a :href="editor.twitterURL">Twitter: {{editor.twitter}}</a>
                         <p>Position: {{editor.position}}</p> -->
-                        <div class="singleEditor" @click="editorView(editor)" :style="{ backgroundImage: 'url(' + editor.picture +')'}">
-                            <div class="editorContent">
-                                <h6>{{editor.name}}</h6>
-                                <p>Position: {{editor.position}}</p>
+                            <div class="singleEditor" @click="editorView(editor)" :style="{ backgroundImage: 'url(' + editor.picture +')'}">
+                                <div class="editorContent">
+                                    <h6>{{editor.name}}</h6>
+                                    <p>Position: {{editor.position}}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Single editor inspection -->
-                <div class="inspectedEditor container" v-else key="2">
-                    <img :src="inspectedEditor.picture" :alt="inspectedEditor.name">
-                    <div class="editorInfo">
-                        <h3>{{inspectedEditor.name}}</h3>
-                        <div>
-                            <h6>{{inspectedEditor.position}}</h6>
-                            <a :href="inspectedEditor.twitterURL">{{inspectedEditor.twitter}}</a>
+                    <!-- Single editor inspection -->
+                    <div class="inspectedEditor container" v-else key="2">
+                        <img :src="inspectedEditor.picture" :alt="inspectedEditor.name">
+                        <div class="editorInfo">
+                            <h3>{{inspectedEditor.name}}</h3>
+                            <div>
+                                <h6>{{inspectedEditor.position}}</h6>
+                                <a :href="inspectedEditor.twitterURL">{{inspectedEditor.twitter}}</a>
+                            </div>
+                            <p>{{inspectedEditor.biography}}</p>
+                            <a @click="fullEditorList" class="cta btn waves-effect waves-light">See All Editors</a>
                         </div>
-                        <p>{{inspectedEditor.biography}}</p>
-                        <a @click="fullEditorList" class="cta btn waves-effect waves-light">See All Editors</a>
                     </div>
-                </div>
-            </transition>
-            <a href="#contact" class="cta btn waves-effect waves-light" v-if="fullList">Join The Team</a>
-        </section>
+                </transition>
+                <a href="#contact" class="cta btn waves-effect waves-light" v-if="fullList">Join The Team</a>
+            </section>
+        </div>
 
-        <!-- Clients and testimonies -->
+        <!-- Testimonies -->
         <section id="testimonials">
             <div class="picture-left span-row-2" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
                 <img src="assets/clients/person.png" alt="">
@@ -188,29 +190,33 @@
                 Accusantium, nihil.</blockquote>
         </section>
 
-        <section id="clients">
-            <h3>Clients</h3>
-            <div class="clientList container">
-                <a :href="client.youtube" target="_blank" class="client" v-for="client in clients" :style="{ backgroundImage: 'url(' + client.picture +')'}">
-                    <div class="clientInfo">
-                        <h6>{{client.name}}</h6>
-                    </div>
-                </a>
-            </div>
-            <a href="#contact" class="cta btn waves-effect waves-light">Join The List</a>
-        </section>
+        <!-- Clients -->
+        <div data-aos="fade-in" data-aos-delay="500" data-aos-duration="1500">
+            <section id="clients">
+                <h3>Clients</h3>
+                <div class="clientList container">
+                    <a :href="client.youtube" target="_blank" class="client" v-for="client in clients" :style="{ backgroundImage: 'url(' + client.picture +')'}">
+                        <div class="clientInfo">
+                            <h6>{{client.name}}</h6>
+                        </div>
+                    </a>
+                </div>
+                <a href="#contact" class="cta btn waves-effect waves-light">Join The List</a>
+            </section>
+        </div>
 
         <!-- Contact Form -->
         <section id="contact">
             <h3 data-aos="fade-right" data-aos-delay="250" data-aos-duration="1000">Hit Us Up</h3>
-            <form class="container col s12" id="ajax-contact" method="post" action="mailer.php" data-aos="zoom-in-right" data-aos-delay="500" data-aos-duration="750">
+            <form class="container col s12" id="ajax-contact" method="post" action="mailer.php" data-aos="zoom-in-right" data-aos-delay="500"
+                data-aos-duration="750">
                 <div class="row">
                     <div class="field col s6">
                         <i class="material-icons prefix">account_circle</i>
                         <label for="name">Name:</label>
                         <input class="validate" type="text" id="name" name="name" required>
                     </div>
-                    
+
                     <div class="field col s6">
                         <i class="material-icons prefix">email</i>
                         <label for="email">Email:</label>

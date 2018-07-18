@@ -78,7 +78,8 @@ nav {
     animation-delay: 1.3s;
     animation-duration: 1.5s;
     animation-name: fadeIn;
-    animation-fill-mode: forwards; }
+    animation-fill-mode: forwards;
+    font-size: 1.5rem; }
   .hero i {
     position: absolute;
     bottom: 4%;
@@ -300,7 +301,7 @@ nav {
 
 #testimonials {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   background-color: #faceb5;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -416,13 +417,14 @@ nav {
     #contact form .textarea {
       height: 50%; }
     #contact form button {
-      margin-top: 5%; }
+      margin-top: 5%;
+      width: 20%; }
 
 textarea {
   height: 100%; }
 
 footer {
-  height: 30vh;
+  min-height: 30vh;
   background-color: black; }
 
 @media only screen and (max-width: 1760px) {
@@ -450,6 +452,8 @@ footer {
     width: 130%;
     right: 100%; } }
 @media only screen and (max-width: 1025px) {
+  .hero h3 {
+    font-size: 1rem; }
   .hero img {
     width: 70%; }
 
@@ -493,8 +497,38 @@ footer {
     #editors h3 {
       padding-top: 3%; }
     #editors .editorList {
-      margin-top: 3%; } }
+      margin-top: 3%; }
+      #editors .editorList .editor .singleEditor {
+        width: 200px;
+        height: 200px; }
+
+  #testimonials {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap; }
+    #testimonials .picture-right,
+    #testimonials .picture-left,
+    #testimonials .text-right,
+    #testimonials .text-left {
+      width: 100%;
+      height: 13%; }
+      #testimonials .picture-right img,
+      #testimonials .picture-left img,
+      #testimonials .text-right img,
+      #testimonials .text-left img {
+        width: 25%; }
+    #testimonials .text-right,
+    #testimonials .text-left {
+      border: none;
+      text-align: center;
+      margin-top: 3%;
+      width: 80%;
+      height: 100%; } }
 @media only screen and (max-width: 768px) {
+  header nav {
+    height: 64px; }
+
   .hero h3 {
     font-size: 2.3rem; }
 
@@ -502,10 +536,18 @@ footer {
     min-height: 60vh; }
     #editors .editorList .editor .singleEditor {
       width: 125px;
-      height: 125px; } }
-@media only screen and (max-width: 415px) {
+      height: 125px; }
+
+  #contact h3 {
+    font-size: 2rem; }
+  #contact form button {
+    margin-top: 11%; } }
+@media only screen and (max-width: 475px) {
   .hero h3 {
-    font-size: 1rem; }
+    font-size: .8rem;
+    width: 70%;
+    line-height: 1.5;
+    text-align: center; }
 
   .callOutRightSlant .callOutLeft {
     width: 100%;
@@ -523,8 +565,26 @@ footer {
     .callOutLeftSlant .callOutRight p {
       font-size: .6rem; }
 
+  #editors h3 {
+    font-size: 2rem; }
   #editors .editorList .editor {
-    width: 40%; } }
+    width: 40%; }
+    #editors .editorList .editor .singleEditor .editorContent h6 {
+      font-size: 1rem; }
+    #editors .editorList .editor .singleEditor .editorContent p {
+      font-size: .7rem; }
+    #editors .editorList .editor .singleEditor .editorContent::before, #editors .editorList .editor .singleEditor .editorContent::after {
+      width: 0;
+      height: 0; }
+
+  #testimonials blockquote {
+    font-size: 1rem; }
+
+  #clients h3 {
+    font-size: 2rem; }
+  #clients .clientList .client {
+    width: 125px;
+    height: 125px; } }
 @keyframes fadeIn {
   0% {
     opacity: 0; }
