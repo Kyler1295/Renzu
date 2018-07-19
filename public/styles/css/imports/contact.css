@@ -1,6 +1,6 @@
 #contact {
   background-color: #faceb5;
-  height: 60vh;
+  min-height: 60vh;
   width: 100vw;
   display: flex;
   justify-content: center;

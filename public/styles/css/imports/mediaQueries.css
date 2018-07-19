@@ -95,13 +95,22 @@
       text-align: center;
       margin-top: 3%;
       width: 80%;
-      height: 100%; } }
+      height: 100%; }
+
+  .fixed-action-btn {
+    display: inline-block; } }
 @media only screen and (max-width: 768px) {
   header nav {
     height: 64px; }
 
   .hero h3 {
     font-size: 2.3rem; }
+
+  .callOutRightSlant {
+    min-height: 70vh; }
+
+  .callOutLeftSlant {
+    min-height: 70vh; }
 
   #editors {
     min-height: 60vh; }
@@ -120,10 +129,19 @@
         padding-bottom: 3%;
         width: 95%; }
 
-  #contact h3 {
-    font-size: 2rem; }
-  #contact form button {
-    margin-top: 11%; } }
+  #clients .clientList .client {
+    width: 100%; }
+
+  #contact {
+    padding-top: 50px;
+    padding-bottom: 50px; }
+    #contact h3 {
+      font-size: 2rem; }
+    #contact form button {
+      margin-top: 11%; }
+
+  .fixed-action-btn {
+    display: none; } }
 @media only screen and (max-width: 475px) {
   .hero h3 {
     font-size: .8rem;
@@ -160,16 +178,6 @@
       height: 0; }
 
   #testimonials blockquote {
-    font-size: 1rem; }
-
-  #clients h3 {
-    font-size: 2rem; }
-  #clients .clientList .client {
-    width: 125px;
-    height: 125px; }
-
-  #contact {
-    padding-top: 3%;
-    padding-bottom: 3%; } }
+    font-size: 1rem; } }
 
 /*# sourceMappingURL=mediaQueries.css.map */
