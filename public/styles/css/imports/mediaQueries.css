@@ -108,6 +108,17 @@
     #editors .editorList .editor .singleEditor {
       width: 125px;
       height: 125px; }
+    #editors .inspectedEditor {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #editors .inspectedEditor img {
+        width: 50%;
+        margin-top: 2%; }
+      #editors .inspectedEditor .editorInfo {
+        padding-top: 5%;
+        padding-bottom: 3%;
+        width: 95%; }
 
   #contact h3 {
     font-size: 2rem; }
@@ -155,6 +166,10 @@
     font-size: 2rem; }
   #clients .clientList .client {
     width: 125px;
-    height: 125px; } }
+    height: 125px; }
+
+  #contact {
+    padding-top: 3%;
+    padding-bottom: 3%; } }
 
 /*# sourceMappingURL=mediaQueries.css.map */

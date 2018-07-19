@@ -16,14 +16,16 @@
     justify-content: center;
     align-items: flex-start; }
     #testimonials .picture-left img {
-      border-radius: 100%; }
+      border-radius: 100%;
+      width: 60%; }
   #testimonials .picture-right {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     padding-top: 5%; }
     #testimonials .picture-right img {
-      border-radius: 100%; }
+      border-radius: 100%;
+      width: 60%; }
   #testimonials .text-left {
     display: flex;
     justify-content: flex-start;

@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <!--Import Google Icon Font-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="styles/css/normalize.css">
     <!-- Animate CSS -->
@@ -165,25 +167,25 @@
         <!-- Testimonies -->
         <section id="testimonials">
             <div class="picture-left span-row-2" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
-                <img src="assets/clients/person.png" alt="">
+                <img src="assets/clients/TFBlade.png" alt="">
             </div>
             <blockquote class="span-col-2 text-left" data-aos="zoom-in-" data-aos-delay="500" data-aos-duration="500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis at. Minima aperiam dolore voluptatibus,
                 nam debitis delectus at voluptatem, consequuntur voluptate, quos veniam dolores facere explicabo asperiores.
                 Accusantium, nihil.</blockquote>
             <div class="picture-right span-row-2" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
-                <img src="assets/clients/person.png" alt="">
+                <img src="assets/clients/Glacierr.jpg" alt="">
             </div>
             <blockquote class="span-col-2 text-right" data-aos="zoom-in-" data-aos-delay="500" data-aos-duration="500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis at. Minima aperiam dolore voluptatibus,
                 nam debitis delectus at voluptatem, consequuntur voluptate, quos veniam dolores facere explicabo asperiores.
                 Accusantium, nihil.</blockquote>
             <div class="picture-left span-row-2" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
-                <img src="assets/clients/person.png" alt="">
+                <img src="assets/clients/Redmercy.jpg" alt="">
             </div>
             <blockquote class="span-col-2 text-left" data-aos="zoom-in-" data-aos-delay="500" data-aos-duration="500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis at. Minima aperiam dolore voluptatibus,
                 nam debitis delectus at voluptatem, consequuntur voluptate, quos veniam dolores facere explicabo asperiores.
                 Accusantium, nihil.</blockquote>
             <div class="picture-right span-row-2" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
-                <img src="assets/clients/person.png" alt="">
+                <img src="assets/clients/ProfessorAkali.jpg" alt="">
             </div>
             <blockquote class="span-col-2 text-right" data-aos="zoom-in-" data-aos-delay="500" data-aos-duration="500" style="height: 60%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis at. Minima aperiam dolore voluptatibus,
                 nam debitis delectus at voluptatem, consequuntur voluptate, quos veniam dolores facere explicabo asperiores.
@@ -194,12 +196,8 @@
         <div data-aos="fade-in" data-aos-delay="500" data-aos-duration="1500">
             <section id="clients">
                 <h3>Clients</h3>
-                <div class="clientList container">
-                    <a :href="client.youtube" target="_blank" class="client" v-for="client in clients" :style="{ backgroundImage: 'url(' + client.picture +')'}">
-                        <div class="clientInfo">
-                            <h6>{{client.name}}</h6>
-                        </div>
-                    </a>
+                <div class="clientList">
+                    <a :href="client.youtube" target="_blank" class="client" v-for="client in clients">{{ client.name }}</a>
                 </div>
                 <a href="#contact" class="cta btn waves-effect waves-light">Join The List</a>
             </section>
@@ -208,7 +206,7 @@
         <!-- Contact Form -->
         <section id="contact">
             <h3 data-aos="fade-right" data-aos-delay="250" data-aos-duration="1000">Hit Us Up</h3>
-            <form class="container col s12" id="ajax-contact" method="post" action="mailer.php" data-aos="zoom-in-right" data-aos-delay="500"
+            <form class="container col s12" id="ajax-contact" method="post" action="scripts/mailer.php" data-aos="zoom-in-right" data-aos-delay="500"
                 data-aos-duration="750">
                 <div class="row">
                     <div class="field col s6">
@@ -230,7 +228,9 @@
                 </div>
 
                 <div class="field">
-                    <button class="btn waves-effect waves-light" type="submit">Send</button>
+                    <button class="btn waves-effect waves-light" type="submit">Send
+                        <i class="material-icons right">send</i>
+                    </button>
                 </div>
             </form>
             <div id="form-messages"></div>
@@ -239,12 +239,40 @@
     </main>
     <footer>
 
+        <div class="container">
+            <span class="copyright"></span>
+        </div>
+
     </footer>
+
+    <div class="fixed-action-btn">
+        <a class="btn-floating btn-large" style="background-color: rgb(100, 191, 164);">
+            <i class="large material-icons">person_add</i>
+        </a>
+        <ul>
+            <li>
+                <a href="#contact" class="btn-floating yellow darken-1">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </li>
+            <li>
+                <a href="youtube.com" class="btn-floating red">
+                        <i class="fab fa-youtube"></i>
+                </a>
+            </li>
+            <li>
+                <a href="www.twitter.com/renzutv" class="btn-floating blue lighten-3">
+                        <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <script src="scripts/materialize.min.js"></script>
     <script src='scripts/vue.min.js'></script>
     <script src='scripts/jquery.min.js'></script>
     <script src="scripts/aos.js"></script>
+    <script src="scripts/mail.js"></script>
     <script src="scripts/main.js"></script>
     <script>
     </script>

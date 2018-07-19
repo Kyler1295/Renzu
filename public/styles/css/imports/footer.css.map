@@ -1,6 +1,6 @@
 {
 "version": 3,
-"mappings": "AAGA,MAAO;EACH,UAAU,EAAE,IAAI;EAChB,gBAAgB,EAAE,KAAK",
+"mappings": "AAGA,MAAO;EACH,UAAU,EAAE,GAAG;EACf,gBAAgB,EAAE,KAAK;EACvB,iBAAW;IACP,OAAO,EAAE,IAAI;IACb,eAAe,EAAE,UAAU;IAC3B,WAAW,EAAE,MAAM;IACnB,MAAM,EAAE,GAAG;IACX,4BAAW;MACP,KAAK,EAAE,KAAK",
 "sources": ["../../scss/imports/footer.scss"],
 "names": [],
 "file": "footer.css"

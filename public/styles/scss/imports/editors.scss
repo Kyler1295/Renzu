@@ -97,11 +97,14 @@
         }
     }
     .inspectedEditor {
-        height: 100vh;
+        min-height: 50vh;
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        padding-top: 10%;
+        padding: 5%;
+        margin-top: 5%;
+        background-color:$LeafGreen;
+        border-radius:15px;
         img {
             width: 20%;
             border-radius: 100%;
@@ -118,6 +121,7 @@
                 height: 15%;
                 h6 {
                     padding-bottom: 3%;
+                    font-weight: bold;
                 }
                 a {
                     padding-bottom: 3%;

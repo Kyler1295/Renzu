@@ -1,3 +1,6 @@
-Responsive design
 Mail animation
-mail good/fail divs
+Footer
+Content
+Photos in Callouts
+Photos of editors
+Editors social media icons

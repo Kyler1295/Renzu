@@ -2,6 +2,9 @@
   margin: 0;
   padding: 0; }
 
+body {
+  background-color: #efefef; }
+
 h1,
 h2,
 h3,
@@ -96,7 +99,7 @@ nav {
   height: 60vh;
   display: flex;
   padding-top: 2%;
-  background-color: white; }
+  background-color: #efefef; }
   .callOutRightSlant .callOutLeft {
     display: flex;
     justify-content: center;
@@ -104,7 +107,7 @@ nav {
     flex-direction: column;
     width: 40%;
     height: 100%;
-    background-color: #ffc4b2;
+    background-color: #fa9a85;
     position: relative; }
     .callOutRightSlant .callOutLeft h4 {
       z-index: 5;
@@ -123,7 +126,7 @@ nav {
     left: 80%;
     width: 100%;
     height: 100%;
-    background: #ffc4b2;
+    background: #fa9a85;
     -webkit-transform-origin: 100% 0;
     -ms-transform-origin: 100% 0;
     transform-origin: 100% 0;
@@ -146,7 +149,7 @@ nav {
   display: flex;
   padding-top: 2%;
   padding-bottom: 2%;
-  background-color: white; }
+  background-color: #efefef; }
   .callOutLeftSlant .callOutLeft {
     width: 60%; }
     .callOutLeftSlant .callOutLeft img {
@@ -161,7 +164,7 @@ nav {
     flex-direction: column;
     width: 40%;
     height: 100%;
-    background-color: #ffc4b2;
+    background-color: #fa9a85;
     position: relative; }
     .callOutLeftSlant .callOutRight h4 {
       z-index: 5;
@@ -180,7 +183,7 @@ nav {
     right: 75%;
     width: 100%;
     height: 100%;
-    background: #ffc4b2;
+    background: #fa9a85;
     -webkit-transform-origin: 100% 0;
     -ms-transform-origin: 100% 0;
     transform-origin: 100% 0;
@@ -273,11 +276,14 @@ nav {
       #editors .editorList .editor .singleEditor:hover .editorContent {
         display: flex; }
   #editors .inspectedEditor {
-    height: 100vh;
+    min-height: 50vh;
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    padding-top: 10%; }
+    padding: 5%;
+    margin-top: 5%;
+    background-color: #00b694;
+    border-radius: 15px; }
     #editors .inspectedEditor img {
       width: 20%;
       border-radius: 100%;
@@ -291,7 +297,8 @@ nav {
       #editors .inspectedEditor .editorInfo div {
         height: 15%; }
         #editors .inspectedEditor .editorInfo div h6 {
-          padding-bottom: 3%; }
+          padding-bottom: 3%;
+          font-weight: bold; }
         #editors .inspectedEditor .editorInfo div a {
           padding-bottom: 3%; }
       #editors .inspectedEditor .editorInfo p {
@@ -318,14 +325,16 @@ nav {
     justify-content: center;
     align-items: flex-start; }
     #testimonials .picture-left img {
-      border-radius: 100%; }
+      border-radius: 100%;
+      width: 60%; }
   #testimonials .picture-right {
     display: flex;
     justify-content: center;
     align-items: flex-end;
     padding-top: 5%; }
     #testimonials .picture-right img {
-      border-radius: 100%; }
+      border-radius: 100%;
+      width: 60%; }
   #testimonials .text-left {
     display: flex;
     justify-content: flex-start;
@@ -345,10 +354,10 @@ nav {
 
 #clients {
   width: 100vw;
-  min-height: 80vh;
+  min-height: 40vh;
   padding-top: 3%;
   padding-bottom: 3%;
-  background-color: #eee;
+  background-color: #fa9a85;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -356,48 +365,27 @@ nav {
   position: relative; }
   #clients .clientList {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-start;
     align-items: flex-start;
     flex-wrap: wrap;
     position: relative;
-    padding: 5%; }
-  #clients .clientList::before {
-    content: '';
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    top: 0;
-    left: 0;
-    border-top: 3px double gray;
-    border-left: 3px double gray; }
-  #clients .clientList::after {
-    content: '';
-    position: absolute;
-    width: 50%;
-    height: 50%;
-    bottom: 0;
-    right: 0;
-    border-bottom: 3px double gray;
-    border-right: 3px double gray; }
-  #clients .client {
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    background-size: cover;
-    margin-bottom: 2%; }
-    #clients .client .clientInfo {
-      width: 100%;
-      height: 100%;
-      display: none;
-      justify-content: center;
-      align-items: center;
-      border-radius: 100%; }
-      #clients .client .clientInfo h6 {
-        font-weight: bold;
-        font-size: 1.4rem; }
-  #clients .client:hover .clientInfo {
-    display: flex;
-    background-color: #faceb5; }
+    padding: 5%;
+    width: 80%; }
+    #clients .clientList .client {
+      font-size: 28px;
+      font-weight: bold;
+      font-style: italic;
+      color: black;
+      opacity: .50;
+      -webkit-transition: transform 1s linear;
+      -ms-transition: transform 1s linear;
+      -o-transition: transform 1s linear;
+      transition: transform 1s linear;
+      width: 20%;
+      text-align: center; }
+    #clients .clientList .client:hover {
+      opacity: 1;
+      transform: scale(1.05); }
 
 #contact {
   background-color: #faceb5;
@@ -425,8 +413,15 @@ textarea {
   height: 100%; }
 
 footer {
-  min-height: 30vh;
+  min-height: 5vh;
   background-color: black; }
+  footer .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 5vh; }
+    footer .container .copyright {
+      color: white; }
 
 @media only screen and (max-width: 1760px) {
   .callOutRightSlant .callOutLeft::after {
@@ -538,6 +533,17 @@ footer {
     #editors .editorList .editor .singleEditor {
       width: 125px;
       height: 125px; }
+    #editors .inspectedEditor {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #editors .inspectedEditor img {
+        width: 50%;
+        margin-top: 2%; }
+      #editors .inspectedEditor .editorInfo {
+        padding-top: 5%;
+        padding-bottom: 3%;
+        width: 95%; }
 
   #contact h3 {
     font-size: 2rem; }
@@ -585,7 +591,11 @@ footer {
     font-size: 2rem; }
   #clients .clientList .client {
     width: 125px;
-    height: 125px; } }
+    height: 125px; }
+
+  #contact {
+    padding-top: 3%;
+    padding-bottom: 3%; } }
 @keyframes fadeIn {
   0% {
     opacity: 0; }

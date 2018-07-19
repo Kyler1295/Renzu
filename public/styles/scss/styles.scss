@@ -1,22 +1,5 @@
 @import 'imports/colors';
-
-// Mixins
-
-// Transform
-@mixin transform($property) {
-    -webkit-transform: $property;
-        -ms-transform: $property;
-         -o-transform: $property;
-            transform: $property;
-}
-
-// Transition
-@mixin transition($property) {
-    -webkit-transition: $property;
-        -ms-transition: $property;
-         -o-transition: $property;
-            transition: $property;
-}
+@import 'imports/mixins';
 
 // All Selector
 
@@ -26,6 +9,10 @@
 }
 
 // Base Styles
+
+body {
+    background-color: #efefef;
+}
 
 h1,
 h2,

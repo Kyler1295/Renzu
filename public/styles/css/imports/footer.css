@@ -1,5 +1,12 @@
 footer {
-  min-height: 30vh;
+  min-height: 5vh;
   background-color: black; }
+  footer .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 5vh; }
+    footer .container .copyright {
+      color: white; }
 
 /*# sourceMappingURL=footer.css.map */

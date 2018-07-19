@@ -5,9 +5,19 @@ document.addEventListener('DOMContentLoaded', function () {
     var instances = M.Sidenav.init(elems);
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('.fixed-action-btn');
+    var instances = M.FloatingActionButton.init(elems);
+});
+
 AOS.init();
 
 var _ = (className) => {return document.querySelector(className)}
+
+const copyright = _('.copyright');
+const year = new Date().getFullYear();
+
+copyright.innerHTML = `Copyright Renzu &copy; ${year}`;
 
 const editorDiv = _('.editors');
 const nav = _('nav');
@@ -150,24 +160,23 @@ const clients = new Vue({
             {
                 name: 'TFBlade',
                 youtube: 'https://www.youtube.com/channel/UCNEmy4a6O2q0ZCz7Qi2MThA',
-                picture: 'assets/clients/person.png'
+                picture: 'assets/clients/TFBlade.png'
             },
             {
-                name: 'RedMercy',
+                name: 'Redmercy',
                 youtube: 'https://www.youtube.com/channel/UCUf53DHwoQw4SvETXZQ2Tmg',
-                picture: 'assets/clients/person.png'
+                picture: 'assets/clients/Redmercy.jpg'
             },
             {
                 name: 'Professor Akali',
                 youtube: 'https://www.youtube.com/channel/UCDIJhfKjVYlbo5-oQvM5EqQ',
-                picture: 'assets/clients/person.png'
+                picture: 'assets/clients/Professor Akali.jpg'
             },
             {
                 name: 'Glacierr',
                 youtube: 'https://www.youtube.com/channel/UCN7x-gVHN_AO0DMtBWMxN3Q',
-                picture: 'assets/clients/person.png'
+                picture: 'assets/clients/Glacierr.jpg'
             },
-            
             {
                 name: 'Flyerbek',
                 youtube: 'https://www.youtube.com/FLYERBEKLOL',

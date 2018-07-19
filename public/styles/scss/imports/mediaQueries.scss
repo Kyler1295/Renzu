@@ -173,6 +173,20 @@
                 }
             }
         }
+        .inspectedEditor {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                img {
+                    width: 50%;
+                    margin-top: 2%;
+                }
+                .editorInfo {
+                    padding-top: 5%;
+                    padding-bottom: 3%;
+                    width: 95%;
+                }
+        }
     }
     #contact {
         h3 {
@@ -243,6 +257,7 @@
                 }
             }
         }
+        
     }
     #testimonials {
         blockquote {
@@ -259,5 +274,9 @@
                 height: 125px;
             }
         }
+    }
+    #contact {
+        padding-top: 3%;
+        padding-bottom: 3%;
     }
 }
