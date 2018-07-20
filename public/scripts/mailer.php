@@ -17,7 +17,7 @@
         }
 
         // Set the recipient email address.
-        $recipient = "business@renzu.tv";
+        $recipient = "contact@renzu.tv";
 
         // Set the email subject.
         $subject = "New contact from $name";
@@ -29,6 +29,7 @@
 
         // Build the email headers.
         $email_headers = "From: $name <$email>";
+        $email_headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";
 
         // Send the email.
         if (mail($recipient, $subject, $email_content, $email_headers)) {

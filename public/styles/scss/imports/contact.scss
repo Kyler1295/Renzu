@@ -1,7 +1,7 @@
 @import 'imports/colors';
 // Contact Section
 #contact {
-    background-color: $PrimaryPeach;
+    background-color: $DarkPeach;
     min-height: 60vh;
     width: 100vw;
     display: flex;
@@ -25,9 +25,16 @@
             margin-top: 5%;
             width: 20%;
         }
+        label {
+            color: black;
+        }
+        input {
+            border-bottom: 1px solid black;
+        }
     }
 }
 
 textarea {
     height: 100%;
+    border-color: black;
 }

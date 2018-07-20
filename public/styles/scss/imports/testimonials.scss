@@ -3,13 +3,18 @@
 // Testimonials Section
 #testimonials {
     width: 100vw;
-    min-height: 100vh;
-    background-color: $PrimaryPeach;
+    min-height: 75vh;
+    background: #d8ebe6; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover, #d8ebe6 0%, #64bfa4 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover, #d8ebe6 0%,#64bfa4 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center, #d8ebe6 0%,#64bfa4 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d8ebe6', endColorstr='#64bfa4',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     padding-top: 5%;
     padding-bottom: 5%;
+    position: relative;
 .span-col-2{
     grid-column: span 2/ auto;
 }
@@ -22,7 +27,7 @@
     align-items: flex-start;
     img {
         border-radius: 100%;
-        width: 60%;
+        width: 40%;
     }
 }
 .picture-right {
@@ -31,7 +36,7 @@
     align-items: flex-end;
     img {
         border-radius: 100%;
-        width: 60%;
+        width: 40%;
     }
     padding-top: 5%;
 }
@@ -40,7 +45,6 @@
     justify-content: flex-start;
     align-items: center;
     height: 50%;
-    margin-top: 9%;
     border-left: 5px solid $LeafGreen;
 }
 .text-right {
@@ -52,5 +56,12 @@
     border-left: none !important;
     height: 50%;
     padding-right: 3%;
+}
+h3 {
+    position: absolute;
+    top: 5%;
+    font-weight: bold;
+    width: 100%;
+    text-align: center;
 }
 }

@@ -10,7 +10,8 @@
     <!--Import Google Icon Font-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!-- Font Awesome CDN -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ"
+        crossorigin="anonymous">
     <!-- Normalize CSS -->
     <link rel="stylesheet" href="styles/css/normalize.css">
     <!-- Animate CSS -->
@@ -19,6 +20,8 @@
     <link rel="stylesheet" href="styles/css/materialize.min.css">
     <!-- Base CSS Stylesheet -->
     <link rel="stylesheet" href="styles/css/styles.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="assets/Peach_Favicon_16px.png">
     <title>Renzu</title>
 </head>
 
@@ -96,15 +99,17 @@
             <!-- Callout Text -->
             <div class="callOutLeft">
                 <h4>Consistent Standards</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, excepturi nesciunt itaque quidem cupiditate
-                    similique suscipit odio! Aliquid maxime officia praesentium quidem, consectetur delectus dolorem. Velit
-                    impedit accusantium porro vel pariatur repellendus repellat reiciendis quasi! Maiores voluptatum eius
-                    accusantium ducimus.</p>
+                <p>
+                    Our editors follow a specific guideline to guarantee that your videos stay consistent no matter who the editor.  
+                    We only produce the highest quality videos, and by hiring only the best we guarantee that your videos gain the numbers you want.
+                    When working with Renzu you gain a team of support with over 15 years of editing experience, and by working one-on-one with editors you get a say in your content.
+                    Our editors speak for themselves with their experience, talent, and abilities.
+                </p>
                 <a href="#editors" class="cta btn waves-effect waves-light">See Our Editors</a>
             </div>
             <!-- Callout Image -->
             <div class="callOutRight">
-                <img src="./assets/placeholder.jpg" alt="#" data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
+                <img src="./assets/placeholder.jpg" alt="Editing" data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
             </div>
         </section>
 
@@ -112,16 +117,18 @@
         <section class="callOutLeftSlant" data-aos="fade-left" data-aos-delay="750" data-aos-duration="1000">
             <!-- Callout Image -->
             <div class="callOutLeft">
-                <img src="./assets/placeholder.jpg" alt="#" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">
+                <img src="./assets/calloutLeft.jpg" alt="Video Editor" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="1000">
             </div>
             <!-- Callout Text -->
             <div class="callOutRight">
                 <h4>A History Of Success</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, excepturi nesciunt itaque quidem cupiditate
-                    similique suscipit odio! Aliquid maxime officia praesentium quidem, consectetur delectus dolorem. Velit
-                    impedit accusantium porro vel pariatur repellendus repellat reiciendis quasi! Maiores voluptatum eius
-                    accusantium ducimus.</p>
-                <a href="#clients" class="cta btn waves-effect waves-light">Meet Our Clients</a>
+                <p>
+                    Our editors have a history of success and helping push their clients forward in their careers.
+                    We allow our editors to provide creative influence over your content within the Renzu standard so that they can put your content first.
+                    Our track record speaks for itself as we have helped high profile influencers grow and succeed through our lens.
+                    See what our clients have to say about Renzu.
+                </p>
+                <a href="#testimonials" class="cta btn waves-effect waves-light">Meet Our Clients</a>
             </div>
         </section>
 
@@ -153,7 +160,7 @@
                             <h3>{{inspectedEditor.name}}</h3>
                             <div>
                                 <h6>{{inspectedEditor.position}}</h6>
-                                <a :href="inspectedEditor.twitterURL">{{inspectedEditor.twitter}}</a>
+                                <a :href="inspectedEditor.twitterURL"><i class="fab fa-twitter social-icon"></i></a>
                             </div>
                             <p>{{inspectedEditor.biography}}</p>
                             <a @click="fullEditorList" class="cta btn waves-effect waves-light">See All Editors</a>
@@ -166,30 +173,23 @@
 
         <!-- Testimonies -->
         <section id="testimonials">
+            <h3>Testimonials</h3>
             <div class="picture-left span-row-2" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
-                <img src="assets/clients/TFBlade.png" alt="">
+                <img src="assets/clients/TFBlade.png" alt="TFBlade">
             </div>
-            <blockquote class="span-col-2 text-left" data-aos="zoom-in-" data-aos-delay="500" data-aos-duration="500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis at. Minima aperiam dolore voluptatibus,
-                nam debitis delectus at voluptatem, consequuntur voluptate, quos veniam dolores facere explicabo asperiores.
-                Accusantium, nihil.</blockquote>
+            <blockquote class="span-col-2 text-left" data-aos="zoom-in-" data-aos-delay="500" data-aos-duration="500">"My channel was started by KiNG himself and is now run by Renzu; They grew it from nothing and work hard every day to continue its success." -TFBlade</blockquote>
             <div class="picture-right span-row-2" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
-                <img src="assets/clients/Glacierr.jpg" alt="">
+                <img src="assets/clients/Glacierr.jpg" alt="Glacierr">
             </div>
-            <blockquote class="span-col-2 text-right" data-aos="zoom-in-" data-aos-delay="500" data-aos-duration="500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis at. Minima aperiam dolore voluptatibus,
-                nam debitis delectus at voluptatem, consequuntur voluptate, quos veniam dolores facere explicabo asperiores.
-                Accusantium, nihil.</blockquote>
+            <blockquote class="span-col-2 text-right" data-aos="zoom-in-" data-aos-delay="500" data-aos-duration="500">"Renzu is the king of consistancy, they rarely take days off and never misses deadlines. Extremely reliable" -Glacierr</blockquote>
             <div class="picture-left span-row-2" data-aos="fade-right" data-aos-delay="500" data-aos-duration="500">
-                <img src="assets/clients/Redmercy.jpg" alt="">
+                <img src="assets/clients/Redmercy.jpg" alt="Redmercy">
             </div>
-            <blockquote class="span-col-2 text-left" data-aos="zoom-in-" data-aos-delay="500" data-aos-duration="500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis at. Minima aperiam dolore voluptatibus,
-                nam debitis delectus at voluptatem, consequuntur voluptate, quos veniam dolores facere explicabo asperiores.
-                Accusantium, nihil.</blockquote>
+            <blockquote class="span-col-2 text-left" data-aos="zoom-in-" data-aos-delay="500" data-aos-duration="500">"Renzu does great work and they are always there when I need them, morning or night." -Redmercy</blockquote>
             <div class="picture-right span-row-2" data-aos="fade-left" data-aos-delay="500" data-aos-duration="500">
-                <img src="assets/clients/ProfessorAkali.jpg" alt="">
+                <img src="assets/clients/flyerbek.jpg" alt="Flyerbek">
             </div>
-            <blockquote class="span-col-2 text-right" data-aos="zoom-in-" data-aos-delay="500" data-aos-duration="500" style="height: 60%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, officiis at. Minima aperiam dolore voluptatibus,
-                nam debitis delectus at voluptatem, consequuntur voluptate, quos veniam dolores facere explicabo asperiores.
-                Accusantium, nihil.</blockquote>
+            <blockquote class="span-col-2 text-right" data-aos="zoom-in-" data-aos-delay="500" data-aos-duration="500" style="height: 60%;">"The People at Renzu have been extremely kind and have provided me with more support for my channel than I could ask for!" -Flyerbek</blockquote>
         </section>
 
         <!-- Clients -->
@@ -257,12 +257,12 @@
             </li>
             <li>
                 <a href="youtube.com" class="btn-floating red">
-                        <i class="fab fa-youtube"></i>
+                    <i class="fab fa-youtube"></i>
                 </a>
             </li>
             <li>
                 <a href="www.twitter.com/renzutv" class="btn-floating blue lighten-3">
-                        <i class="fab fa-twitter"></i>
+                    <i class="fab fa-twitter"></i>
                 </a>
             </li>
         </ul>

@@ -1,30 +1,36 @@
 Vue.config.devtools = true
 
+// Activates Navbar
 document.addEventListener('DOMContentLoaded', function () {
     var elems = document.querySelectorAll('.sidenav');
     var instances = M.Sidenav.init(elems);
 });
 
+// Activates Floating Action Button
 document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.fixed-action-btn');
     var instances = M.FloatingActionButton.init(elems);
 });
 
+// Initiates AOS
 AOS.init();
 
+// Query Selector Function
 var _ = (className) => {return document.querySelector(className)}
 
+// Copyright year
 const copyright = _('.copyright');
 const year = new Date().getFullYear();
 
 copyright.innerHTML = `Copyright Renzu &copy; ${year}`;
 
+// Variables
 const editorDiv = _('.editors');
 const nav = _('nav');
 const logo = _('.logo');
 const navItems = document.querySelectorAll('.navText');
 
-
+// Editors Vue Element
 const app = new Vue ({
     el: '#editors',
     data: {
@@ -79,7 +85,7 @@ const app = new Vue ({
                 twitter: '@igb_',
                 twitterURL: 'https://twitter.com/igbCC',
                 picture: 'assets/Staff/igb.png',
-                biography: 'tbd',
+                biography: 'Hey I\'m Boris (igb_) Bakalov, I\'ve been editing for over 2 years now and my favorite style of editing is a one with clean graphics and movement, something about it is just particularly interesting and important for me. Even more important for me however is the satisfaction of my clients, providing fluid communication and high quality edits on time. It\'s my dream to be a professional editor, so every project I take on is as special to me as the last. Im excited to create amazing content alongside my family at Renzu.',
                 position: 'Editor'
             },
             {
@@ -87,7 +93,7 @@ const app = new Vue ({
                 twitter: '@Ryscu_',
                 twitterURL: 'https://twitter.com/Ryscu_',
                 picture: 'assets/Staff/Ryscu.jpg',
-                biography: 'tbd',
+                biography: 'Hey! I\'m Ryan, also known as Ryscu. I started learning about video editing about 10 years ago as kid and I\'ve been hooked ever since. I started off editing short clips and montages and more recently started getting into stream highlights. I enjoy making videos that others can enjoy, and intend to keep doing it for as long as possible!',
                 position: 'Editor'
             },
             {
@@ -107,11 +113,19 @@ const app = new Vue ({
                 position: 'Designer'
             },
             {
+                name: 'Hulu',
+                twitter: '@Hulu_Rediting',
+                twitterURL: 'https://twitter.com/Hulu_Rediting',
+                picture: 'assets/Staff/Hulu.png',
+                biography: 'tbd',
+                position: 'Designer'
+            },
+            {
                 name: 'Hopoffplease',
                 twitter: '@kyler1295',
                 twitterURL: 'https://twitter.com/kyler1295',
                 picture: 'assets/Staff/Hop.jpg',
-                biography: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium reiciendis repellat expedita ducimus a asperiores quos dolorum, eligendi consectetur modi.',
+                biography: 'Hello! My names Kyle and I have been a Web Developer for 3 years. I have a degree in Digital Communications with a concentration in User Experience. I love creating something from nothing and using my skills and talents to inform the world of opportunities like Renzu. I specialize in Front-End Development and Javascript with a passions for Vue.js.',
                 position: 'Developer'
             }
         ],
@@ -153,10 +167,17 @@ const app = new Vue ({
     }
 });
 
+// Clients Vue Element
 const clients = new Vue({
     el: '#clients',
     data: {
         clients: [
+            // Client Template
+            // {
+            //     name: '',
+            //     youtube: '',
+            //     picture: ''
+            // },
             {
                 name: 'TFBlade',
                 youtube: 'https://www.youtube.com/channel/UCNEmy4a6O2q0ZCz7Qi2MThA',
@@ -186,6 +207,7 @@ const clients = new Vue({
     }
 });
 
+// Handles the navbar change.
 window.addEventListener('scroll', function() {
     if(window.pageYOffset > 100){
         nav.style.backgroundColor = '#64bfa4';
