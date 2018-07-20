@@ -328,9 +328,13 @@ nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
-  padding-top: 5%;
+  padding-top: 3%;
   padding-bottom: 5%;
   position: relative; }
+  #testimonials h3 {
+    grid-column: span 4/ auto;
+    font-weight: bold;
+    text-align: center; }
   #testimonials .span-col-2 {
     grid-column: span 2/ auto; }
   #testimonials .span-row-2 {
@@ -365,12 +369,6 @@ nav {
     border-left: none !important;
     height: 50%;
     padding-right: 3%; }
-  #testimonials h3 {
-    position: absolute;
-    top: 5%;
-    font-weight: bold;
-    width: 100%;
-    text-align: center; }
 
 #clients {
   width: 100vw;

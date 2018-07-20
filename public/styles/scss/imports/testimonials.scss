@@ -12,9 +12,14 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
-    padding-top: 5%;
+    padding-top: 3%;
     padding-bottom: 5%;
     position: relative;
+    h3 {
+        grid-column: span 4/ auto;
+        font-weight: bold;
+        text-align: center;
+    }
 .span-col-2{
     grid-column: span 2/ auto;
 }
@@ -56,12 +61,5 @@
     border-left: none !important;
     height: 50%;
     padding-right: 3%;
-}
-h3 {
-    position: absolute;
-    top: 5%;
-    font-weight: bold;
-    width: 100%;
-    text-align: center;
 }
 }
